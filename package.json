@@ -30,7 +30,7 @@
     "remark-autolink-headings": "git+https://github.com/thetutlage/remark-autolink-headings.git",
     "remark-macro": "^1.0.7",
     "remark-parse": "^5.0.0",
-    "remark-ping": "2.1.6",
+    "remark-mention": "git+https://github.com/cmty/remark-mention.git",
     "remark-rehype": "^3.0.1",
     "remark-slug": "^5.1.0",
     "remark-squeeze-paragraphs": "^3.0.2",

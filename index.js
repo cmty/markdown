@@ -11,8 +11,8 @@
 
 const unified = require('unified')
 const markdown = require('remark-parse')
-const slug = require('remark-slug')
-const headings = require('remark-autolink-headings')
+// const slug = require('remark-slug')
+// const headings = require('remark-autolink-headings')
 const squeezeParagraphs = require('remark-squeeze-paragraphs')
 const minifyWhiteSpace = require('rehype-minify-whitespace')
 const remark2rehype = require('remark-rehype')
@@ -20,9 +20,9 @@ const sanitize = require('rehype-sanitize')
 const sortValues = require('rehype-sort-attribute-values')
 const sortAttrs = require('rehype-sort-attributes')
 const macroEngine = require('remark-macro')()
-const ping = require('remark-ping')
+const mention = require('remark-mention')
 
-const { title, checklist, relativeLinks, toc } = require('./src/transformers')
+// const { title, checklist, relativeLinks, toc } = require('./src/transformers')
 require('./src/macros')(macroEngine)
 
 /**
@@ -67,12 +67,12 @@ class MarkdownProcessor {
   getStream () {
     return unified()
       .use(markdown)
-      .use(ping, this.options.ping)
+      .use(mention, this.options.mention)
       // .use(title, this.options)
       // .use(toc, this.options)
       // .use(relativeLinks, this.options)
-      .use(slug)
-      .use(headings)
+      // .use(slug)
+      // .use(headings)
       .use(macroEngine.transformer)
       .use(squeezeParagraphs)
       // .use(checklist, this.options)
