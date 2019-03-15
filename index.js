@@ -20,7 +20,7 @@ const sanitize = require('rehype-sanitize')
 const sortValues = require('rehype-sort-attribute-values')
 const sortAttrs = require('rehype-sort-attributes')
 const macroEngine = require('remark-macro')()
-const mention = require('remark-mention')
+const ping = require('remark-ping')
 
 // const { title, checklist, relativeLinks, toc } = require('./src/transformers')
 require('./src/macros')(macroEngine)
@@ -67,7 +67,7 @@ class MarkdownProcessor {
   getStream () {
     return unified()
       .use(markdown)
-      .use(mention, this.options.mention)
+      .use(ping, this.options.ping)
       // .use(title, this.options)
       // .use(toc, this.options)
       // .use(relativeLinks, this.options)
