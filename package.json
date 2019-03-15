@@ -28,6 +28,7 @@
     "rehype-sort-attributes": "^1.0.1",
     "rehype-stringify": "^4.0.0",
     "remark-autolink-headings": "git+https://github.com/thetutlage/remark-autolink-headings.git",
+    "remark-emoji": "2.0.2",
     "remark-macro": "^1.0.7",
     "remark-parse": "^5.0.0",
     "remark-ping": "2.1.6",

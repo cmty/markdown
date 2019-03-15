@@ -21,6 +21,7 @@ const sortValues = require('rehype-sort-attribute-values')
 const sortAttrs = require('rehype-sort-attributes')
 const macroEngine = require('remark-macro')()
 const ping = require('remark-ping')
+const emoji = require('remark-emoji')
 
 // const { title, checklist, relativeLinks, toc } = require('./src/transformers')
 require('./src/macros')(macroEngine)
@@ -67,6 +68,7 @@ class MarkdownProcessor {
   getStream () {
     return unified()
       .use(markdown)
+      .use(emoji)
       .use(ping, this.options.ping)
       // .use(title, this.options)
       // .use(toc, this.options)
